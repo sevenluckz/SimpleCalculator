@@ -64,10 +64,10 @@
             // 
             // answerBox
             // 
-            this.answerBox.Location = new System.Drawing.Point(81, 158);
+            this.answerBox.Location = new System.Drawing.Point(16, 158);
             this.answerBox.Name = "answerBox";
             this.answerBox.ReadOnly = true;
-            this.answerBox.Size = new System.Drawing.Size(129, 20);
+            this.answerBox.Size = new System.Drawing.Size(255, 20);
             this.answerBox.TabIndex = 3;
             // 
             // addBtn

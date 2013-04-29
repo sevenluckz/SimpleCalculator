@@ -20,30 +20,46 @@ namespace SimpleCalculator
         private void addBtn_Click(object sender, EventArgs e)
         {
             string strL = textBoxL.Text, strR = textBoxR.Text;
-            int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL + intR;
-            answerBox.Text = Convert.ToString(intF);
+            try
+            {
+                int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL + intR;
+                answerBox.Text = Convert.ToString(intF);
+            }
+            catch (Exception ex) { answerBox.Text = "Please enter two NUMBERS!"; }
         }
 
         private void minusBtn_Click(object sender, EventArgs e)
         {
-            string strL = textBoxL.Text, strR = textBoxR.Text;
-            int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL - intR;
-            answerBox.Text = Convert.ToString(intF);
+            try
+            {
+                string strL = textBoxL.Text, strR = textBoxR.Text;
+                int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL - intR;
+                answerBox.Text = Convert.ToString(intF);
+            }
+            catch (Exception ex) { answerBox.Text = "Please enter two NUMBERS!"; }
         }
 
         private void multiBtn_Click(object sender, EventArgs e)
         {
-            string strL = textBoxL.Text, strR = textBoxR.Text;
-            int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL * intR;
-            answerBox.Text = Convert.ToString(intF);
+            try
+            {
+                string strL = textBoxL.Text, strR = textBoxR.Text;
+                int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL * intR;
+                answerBox.Text = Convert.ToString(intF);
+            }
+            catch (Exception ex) { answerBox.Text = "Please enter two NUMBERS!"; }
         }
 
         private void divBtn_Click(object sender, EventArgs e)
         {
-            string strL = textBoxL.Text, strR = textBoxR.Text;
-            int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR);
-            if (intR == 0) { answerBox.Text = "Can't divide by zero!"; }
-            else { int intF = intL / intR; answerBox.Text = Convert.ToString(intF); }
+            try
+            {
+                string strL = textBoxL.Text, strR = textBoxR.Text;
+                int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR);
+                if (intR == 0) { answerBox.Text = "Can't divide by zero!"; }
+                else { int intF = intL / intR; answerBox.Text = Convert.ToString(intF); }
+            }
+            catch (Exception ex) { answerBox.Text = "Please enter two NUMBERS!"; }
         }
     }
 }
