@@ -22,8 +22,8 @@ namespace SimpleCalculator
             string strL = textBoxL.Text, strR = textBoxR.Text;
             try
             {
-                int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL + intR;
-                answerBox.Text = Convert.ToString(intF);
+                double dblL = Convert.ToDouble(strL), dblR = Convert.ToDouble(strR), dblF = dblL + dblR;
+                answerBox.Text = Convert.ToString(dblF);
             }
             catch (Exception ex) { answerBox.Text = "Please enter two NUMBERS!"; }
         }
@@ -33,8 +33,8 @@ namespace SimpleCalculator
             try
             {
                 string strL = textBoxL.Text, strR = textBoxR.Text;
-                int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL - intR;
-                answerBox.Text = Convert.ToString(intF);
+                double dblL = Convert.ToDouble(strL), dblR = Convert.ToDouble(strR), dblF = dblL - dblR;
+                answerBox.Text = Convert.ToString(dblF);
             }
             catch (Exception ex) { answerBox.Text = "Please enter two NUMBERS!"; }
         }
@@ -44,8 +44,8 @@ namespace SimpleCalculator
             try
             {
                 string strL = textBoxL.Text, strR = textBoxR.Text;
-                int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR), intF = intL * intR;
-                answerBox.Text = Convert.ToString(intF);
+                double dblL = Convert.ToDouble(strL), dblR = Convert.ToDouble(strR), dblF = dblL * dblR;
+                answerBox.Text = Convert.ToString(dblF);
             }
             catch (Exception ex) { answerBox.Text = "Please enter two NUMBERS!"; }
         }
@@ -55,9 +55,9 @@ namespace SimpleCalculator
             try
             {
                 string strL = textBoxL.Text, strR = textBoxR.Text;
-                int intL = Convert.ToInt32(strL), intR = Convert.ToInt32(strR);
-                if (intR == 0) { answerBox.Text = "Can't divide by zero!"; }
-                else { int intF = intL / intR; answerBox.Text = Convert.ToString(intF); }
+                double dblL = Convert.ToDouble(strL), dblR = Convert.ToDouble(strR);
+                if (dblR == 0) { answerBox.Text = "Can't divide by zero!"; }
+                else { double dblF = dblL / dblR; answerBox.Text = Convert.ToString(dblF); }
             }
             catch (Exception ex) { answerBox.Text = "Please enter two NUMBERS!"; }
         }
